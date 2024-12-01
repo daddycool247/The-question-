@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Girlfriend?</h1>
+    <button id="yes" onclick="redirectToFlowers()">Yes</button>
+    <button id="no" onmouseover="moveButton()">No</button>
+
+    <script>
+        const button = document.getElementById("no");
+        function moveButton() {
+            const x = Math.random() * window.innerWidth * 0.8;
+            const y = Math.random() * window.innerHeight * 0.8;
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+        function redirectToFlowers() {
+            window.location.href = "flowers.html";
+        }
+    </script>
+</body>
+</html>
